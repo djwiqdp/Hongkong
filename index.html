@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HK Archive</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor">
+    <span class="core"></span>
+    <div id="trail"></div>
+  </div>
+
+  <div class="wrap">
+    <!-- LEFT: Gallery -->
+    <section class="gallery">
+      <div class="headbar">
+        <img class="logo" src="logo.png" alt="Logo"/>
+      </div>
+
+      <div class="intro">
+        <p class="prose">
+선셋롤러코스터에 한창 빠졌을때 플레이리스트를 무한반복시키면서 식사를 하고 잠을 잤었다. 
+그때는 아주 긴... 열대야.. 습하고 축축한 여름같다는 생각을 했는데, 내가 기억하는 홍콩 영화들이 다 그렇다. 
+카페에 가서 따뜻한 밀크티를 마시면서 영자신문을 뒤적거리는 그런 로망이나 건물이 다닥다닥 붙어있는 사이로 빨래를 걸어놓는다거나 하는... 
+그런 이미지를 막연하게 생각하며 여행을 계획했다. 아쉽게도 오래된 홍콩의 가게들이 점점 하나씩 없어지고 있다고 한다. 
+정제되지 않은 날것에서 보여지는 세련됨이 홍콩이라고 생각했는데, 난 겪어보지 않은 세대임에도 불구하고 아쉽다.
+
+여행내내 함께했던 지윤이와 하루에 삼만보는 걸은 것 같고 같이 맛있는 것도 먹고 노래도 부르고
+최고의 여행 메이트. 담에 또 같이 새로운 여행지를 발굴하자!
+        </p>
+      </div>
+
+      <div id="days" class="days"></div>
+
+      <div class="footnote">© HK Archive 11.29 - 12.01</div>
+    </section>
+
+    <!-- RIGHT: Jukebox -->
+    <aside class="jukebox">
+      <div class="panel">
+        <div class="discwrap">
+          <button id="discBtn" class="disc" aria-label="Play / Pause">
+            <img id="art" alt="Album Art"/>
+            <span class="hole"></span>
+            <span class="ring"></span>
+          </button>
+        </div>
+        <div id="title" class="title-serif">Title</div>
+        <div id="artist" class="artist-sans">Artist</div>
+
+        <div id="progress" class="progress" role="slider" aria-valuemin="0" aria-valuemax="100">
+          <div id="bar" class="bar"></div>
+        </div>
+        <div class="time"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+
+        <div id="list" class="list"></div>
+
+        <audio id="audio" preload="metadata"></audio>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="vbPrev" class="lx prev" aria-label="Previous">‹</button>
+    <img id="big" alt="Preview"/>
+    <div id="lbCaption" class="lb-caption">
+      <span class="num">01</span>
+      <span class="txt">설명</span>
+    </div>
+    <button id="vbNext" class="lx next" aria-label="Next">›</button>
+  </div>
+
+  <!-- Invitation Modal (letter.png 중앙, X 없음, 배경 클릭으로 닫힘) -->
+  <div id="invite" class="invite open" role="dialog" aria-modal="true">
+    <div class="invite-sheet">
+      <img src="letter.png" alt="Invitation letter" class="letter-img"/>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
